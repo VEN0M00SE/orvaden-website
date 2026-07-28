@@ -614,7 +614,7 @@ a {
 
   margin: 0 auto;
 
-  padding: 165px 0;
+  padding: 90px 0;
 }
 
 .statement {
@@ -1570,10 +1570,10 @@ a {
 .mystery-hero {
   display: grid;
   width: min(calc(100% - 40px), var(--max-width));
-  min-height: calc(100vh - 92px);
+  min-height: auto;
   align-items: center;
   margin: 0 auto;
-  padding: 75px 0 100px;
+  padding: 40px 0 60px;
   gap: 55px;
   grid-template-columns: minmax(420px, 0.9fr) minmax(0, 1.1fr);
 }
@@ -1582,7 +1582,7 @@ a {
   position: relative;
 
   display: grid;
-  min-height: 610px;
+  min-height: 480px;
 
   place-items: center;
   overflow: hidden;
@@ -1647,12 +1647,12 @@ a {
 .system-section {
   width: min(calc(100% - 40px), var(--max-width));
   margin: 0 auto;
-  padding: 165px 0;
+  padding: 90px 0;
 }
 
 .system-heading {
   max-width: 880px;
-  margin-bottom: 72px;
+  margin-bottom: 40px;
 }
 
 .system-heading h2 {
