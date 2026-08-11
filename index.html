@@ -2,34 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Orvaden Technologies. Engineered for what’s next."
+      content="Orvaden Technologies. Building quietly. Engineering deliberately."
     />
+    <meta name="theme-color" content="#03060b" />
 
     <title>Orvaden Technologies</title>
 
+    <link rel="canonical" href="https://orvaden.com/" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <div class="page-grid" aria-hidden="true"></div>
     <div class="ambient-glow ambient-glow-one" aria-hidden="true"></div>
     <div class="ambient-glow ambient-glow-two" aria-hidden="true"></div>
 
     <header class="site-header">
-      <a class="header-brand" href="#home" aria-label="Orvaden home">
-        <img
-          src="assets/orvaden-logo.png"
-          alt=""
-          class="header-logo"
-        />
+      <a class="header-brand" href="/" aria-label="Orvaden Technologies home">
+        <img src="assets/orvaden-logo.png" alt="" class="header-logo" />
 
         <span class="header-brand-copy">
           <strong>ORVADEN</strong>
@@ -38,13 +33,13 @@
       </a>
 
       <div class="header-status">
-        <span class="status-light"></span>
+        <span class="status-light" aria-hidden="true"></span>
         Active development
       </div>
     </header>
 
-    <main>
-      <section class="mystery-hero" id="home">
+    <main id="main-content">
+      <section class="mystery-hero" aria-labelledby="hero-title">
         <div class="hero-logo-wrap reveal">
           <img
             src="assets/orvaden-logo.png"
@@ -56,90 +51,12 @@
         <div class="mystery-copy reveal">
           <p class="eyebrow">Orvaden Technologies</p>
 
-          <h1>
+          <h1 id="hero-title">
             Building quietly.
             <span>Engineering deliberately.</span>
           </h1>
 
-          <p>
-            Something focused, capable, and entirely new is taking shape.
-          </p>
-
-        </div>
-      </section>
-
-      <section class="statement-section" id="approach">
-        <div class="statement reveal">
-          <p class="eyebrow">Our approach</p>
-
-          <h2>
-            Software should adapt to people.
-            <span>Not the other way around.</span>
-          </h2>
-        </div>
-      </section>
-
-      <section class="system-section">
-        <div class="system-heading reveal">
-          <p class="eyebrow">Foundation / 001</p>
-
-          <h2>
-            Clarity.
-            <span>Focus. Reliability.</span>
-          </h2>
-        </div>
-
-        <div class="hero-system reveal" aria-hidden="true">
-          <div class="system-toolbar">
-            <span>ORVADEN SYSTEMS</span>
-
-            <span class="system-status">
-              <span></span>
-              Online
-            </span>
-          </div>
-
-          <div class="system-field">
-            <div class="system-grid"></div>
-
-            <div class="system-orbit orbit-one"></div>
-            <div class="system-orbit orbit-two"></div>
-            <div class="system-orbit orbit-three"></div>
-
-            <div class="system-axis horizontal-axis"></div>
-            <div class="system-axis vertical-axis"></div>
-
-            <div class="system-mark">
-              <span class="mark-ring"></span>
-              <span class="mark-peak"></span>
-              <span class="mark-core"></span>
-            </div>
-
-            <span class="system-node node-one"></span>
-            <span class="system-node node-two"></span>
-            <span class="system-node node-three"></span>
-            <span class="system-node node-four"></span>
-
-            <div class="scan-line"></div>
-          </div>
-
-          <div class="system-footer">
-            <span>ACTIVE DEVELOPMENT</span>
-            <span>ENGINEERED FOR WHAT’S NEXT</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="closing-section">
-        <div class="closing-panel reveal">
-          <p class="eyebrow">Orvaden Technologies</p>
-
-          <h2>
-            The foundation
-            <span>is taking shape.</span>
-          </h2>
-
-          <p>More will be revealed when the time is right.</p>
+          <p>Something focused, capable, and entirely new is taking shape.</p>
         </div>
       </section>
     </main>
@@ -150,9 +67,16 @@
         <span>TECHNOLOGIES</span>
       </div>
 
-      <p>Engineered for what’s next.</p>
+      <p class="footer-tagline">Engineered for what’s next.</p>
 
-      <p>© <span id="currentYear"></span> Orvaden Technologies, LLC</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/crosscheck/support/">CrossCheck Support</a>
+        <a href="/crosscheck/privacy/">Privacy</a>
+      </nav>
+
+      <p class="footer-copyright">
+        © <span data-current-year></span> Orvaden Technologies
+      </p>
     </footer>
 
     <script src="script.js"></script>
