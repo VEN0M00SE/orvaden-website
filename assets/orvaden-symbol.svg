@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+<title id="title">Orvaden symbol</title>
+<desc id="desc">Orvaden, LLC logo featuring the broken-ring angular Orvaden mark.</desc>
+
+<defs>
+  <g id="orvaden-mark">
+    <g fill="none" stroke="#2A2D31" stroke-width="105" stroke-linecap="butt">
+      <path d="M175 500 A325 325 0 0 1 475 177"/>
+      <path d="M525 177 A325 325 0 0 1 825 500"/>
+      <path d="M175 550 A325 325 0 0 0 230 735"/>
+      <path d="M825 550 A325 325 0 0 1 770 735"/>
+    </g>
+    <path fill="#2A2D31" d="M160 880 500 270 840 880H695L500 530 305 880Z"/>
+    <path fill="#1462FF" d="M500 650 395 855H605Z"/>
+  </g>
+  <g id="orvaden-wordmark" fill="#2A2D31">
+    <path fill-rule="evenodd" d="M22 0H148Q170 0 170 22V178Q170 200 148 200H22Q0 200 0 178V22Q0 0 22 0ZM45 42V158H125V42Z"/>
+    <path fill-rule="evenodd" d="M200 0H340Q375 0 375 35V78Q375 108 348 115L395 200H335L290 120H255V200H200ZM255 40V82H320V40Z"/>
+    <path d="M405 0H465L510 140 555 0H615L542 200H478Z"/>
+    <path d="M615 200 690 0H750L825 200H765L720 65 675 200Z"/>
+    <path fill-rule="evenodd" d="M850 0H960Q1025 0 1025 65V135Q1025 200 960 200H850ZM905 42V158H950Q970 158 970 138V62Q970 42 950 42Z"/>
+    <path d="M1050 0H1215V42H1105V78H1200V120H1105V158H1215V200H1050Z"/>
+    <path d="M1240 200V0H1295L1375 122V0H1430V200H1375L1295 78V200Z"/>
+  </g>
+  <path id="wordmark-accent" fill="#1462FF" d="M720 123 682 198H758Z"/>
+  <g id="llc" fill="#2A2D31">
+    <path d="M0 0H32V70H82V100H0Z"/>
+    <path d="M105 0H137V70H187V100H105Z"/>
+    <path d="M300 0V30H235Q220 30 220 45V55Q220 70 235 70H300V100H225Q188 100 188 63V37Q188 0 225 0Z"/>
+  </g>
+</defs>
+<use xlink:href="#orvaden-mark"/>
+</svg>

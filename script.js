@@ -23,3 +23,4 @@ if (!("IntersectionObserver" in window)) {
 
   revealElements.forEach((element) => revealObserver.observe(element));
 }
+
