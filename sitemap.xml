@@ -4,9 +4,15 @@
     <loc>https://orvaden.com/</loc>
   </url>
   <url>
-    <loc>https://orvaden.com/crosscheck/support/</loc>
+    <loc>https://orvaden.com/contact/</loc>
   </url>
   <url>
-    <loc>https://orvaden.com/crosscheck/privacy/</loc>
+    <loc>https://orvaden.com/privacy/</loc>
+  </url>
+  <url>
+    <loc>https://orvaden.com/orvaden-check/support/</loc>
+  </url>
+  <url>
+    <loc>https://orvaden.com/orvaden-check/privacy/</loc>
   </url>
 </urlset>

@@ -1,25 +1,25 @@
-document.querySelectorAll("[data-current-year]").forEach((element) => {
-  element.textContent = new Date().getFullYear();
+document.querySelectorAll("[data-current-year]").forEach((node) => {
+  node.textContent = new Date().getFullYear();
 });
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealItems = document.querySelectorAll(".reveal");
 
-if (!("IntersectionObserver" in window)) {
-  revealElements.forEach((element) => element.classList.add("visible"));
-} else {
-  const revealObserver = new IntersectionObserver(
+if ("IntersectionObserver" in window) {
+  revealItems.forEach((item) => item.classList.add("reveal-pending"));
+
+  const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
         }
-
-        entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target);
       });
     },
     { threshold: 0.12 },
   );
 
-  revealElements.forEach((element) => revealObserver.observe(element));
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
 }
