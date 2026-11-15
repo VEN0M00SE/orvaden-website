@@ -32,3 +32,137 @@ transform:scale(1.01)}
   .shop-lede{font-size:.94rem}
   .shop-standard-inner{min-height:0}
 }
+
+/* ORVADEN V6.4B — Horizontal app rail */
+.product-grid.product-rail{display:flex;grid-template-columns:none;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-inline:0;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:rgba(142,153,160,.36) transparent}
+.product-grid.product-rail::-webkit-scrollbar{height:4px}
+.product-grid.product-rail::-webkit-scrollbar-track{background:transparent}
+.product-grid.product-rail::-webkit-scrollbar-thumb{background:rgba(142,153,160,.34);border-radius:999px}
+.product-grid.product-rail .product{flex:0 0 clamp(320px,24vw,390px);min-width:320px;min-height:286px;scroll-snap-align:start}
+.product-grid.product-rail .product+.product{border-left:1px solid var(--line)}
+.product-rail-hint{margin:11px 0 0;color:#707a81;font-size:.68rem;letter-spacing:.035em;text-align:right}
+.product-rail-hint span{color:#78b5ff}
+@media(max-width:980px){.product-grid.product-rail{display:flex;grid-template-columns:none;border-top:0}.product-grid.product-rail .product{flex:0 0 315px;min-width:315px;min-height:300px;border-top:0!important}.product-grid.product-rail .product:nth-child(odd){border-left:1px solid var(--line)}.product-grid.product-rail .product:first-child{border-left:0}}
+@media(max-width:600px){.product-grid.product-rail{display:flex;margin-right:calc(var(--gutter) * -1);padding-right:var(--gutter);border-top:0}.product-grid.product-rail .product{flex:0 0 min(78vw,300px);min-width:260px;min-height:286px;padding:22px 20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;border-top:0!important}.product-grid.product-rail .product+.product{border-left:1px solid var(--line)!important}.product-grid.product-rail .product:first-child{border-left:0!important}.product-grid.product-rail .product-icon-frame{grid-row:auto;width:86px;margin:0 0 12px}.product-grid.product-rail .product h3{margin:0 0 7px}.product-grid.product-rail .product p{max-width:220px;padding-right:0;font-size:.74rem}.product-grid.product-rail .store-button,.product-grid.product-rail .coming-soon{grid-column:auto;grid-row:auto;margin-top:auto}.product-grid.product-rail .store-button{min-width:126px;min-height:41px;padding:5px 10px;font-size:.78rem}.product-grid.product-rail .coming-soon{min-width:0;text-align:center;font-size:.62rem}.product-rail-hint{text-align:left}}
+
+/* ORVADEN V6.4C — persistent app rail cue */
+.product-rail-hint{
+  position:relative;
+  margin:14px 0 0;
+  padding-top:18px;
+  color:#707a81;
+  font-size:.68rem;
+  letter-spacing:.035em;
+  text-align:right;
+}
+.product-rail-hint:before{
+  content:"";
+  position:absolute;
+  top:4px;
+  left:0;
+  right:0;
+  height:2px;
+  border-radius:999px;
+  background:rgba(197,205,211,.16);
+}
+.product-rail-hint:after{
+  content:"";
+  position:absolute;
+  top:3px;
+  left:0;
+  width:78%;
+  height:4px;
+  border-radius:999px;
+  background:linear-gradient(90deg,rgba(61,153,255,.68),rgba(122,190,255,.92));
+  box-shadow:0 0 10px rgba(45,143,255,.14);
+}
+.product-rail-hint span{
+  color:#78b5ff;
+}
+@media(max-width:600px){
+  .product-rail-hint{
+    text-align:left;
+  }
+  .product-rail-hint:after{
+    width:58%;
+  }
+}
+
+/* ORVADEN V6.4D — functional app scrollbar */
+.product-grid.product-rail{
+  scrollbar-width:none;
+}
+.product-grid.product-rail::-webkit-scrollbar{
+  display:none;
+}
+
+.product-rail-hint{
+  display:none !important;
+}
+
+.product-scroll-ui{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:18px;
+}
+
+.product-scrollbar{
+  position:relative;
+  height:18px;
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  touch-action:none;
+}
+
+.product-scrollbar:before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  height:2px;
+  background:rgba(197,205,211,.18);
+  border-radius:999px;
+}
+
+.product-scrollbar-thumb{
+  position:relative;
+  z-index:2;
+  height:5px;
+  min-width:70px;
+  border-radius:999px;
+  background:linear-gradient(
+    90deg,
+    rgba(55,145,255,.78),
+    rgba(117,188,255,.98)
+  );
+  box-shadow:0 0 12px rgba(45,143,255,.18);
+  will-change:transform,width;
+}
+
+.product-scrollbar:hover .product-scrollbar-thumb{
+  height:6px;
+}
+
+.product-scroll-label{
+  color:#778188;
+  font-size:.66rem;
+  letter-spacing:.05em;
+  white-space:nowrap;
+}
+
+.product-scroll-label span{
+  color:#78b5ff;
+}
+
+@media(max-width:600px){
+  .product-scroll-ui{
+    gap:12px;
+  }
+
+  .product-scroll-label{
+    font-size:.60rem;
+  }
+}
